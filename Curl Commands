@@ -1,0 +1,29 @@
+1.Retrieve all suppliers
+
+curl -X 'GET' \
+  'http://localhost:8080/supplier' \
+  -H 'accept: */*'
+
+2.Retrieve a speecific supplier
+curl -X 'GET' \
+  'http://localhost:8080/supplier/1' \
+  -H 'accept: */*'
+
+3.Delete a specific supplier
+curl -X 'DELETE' \
+  'http://localhost:8080/supplier/2' \
+  -H 'accept: */*'
+
+4.Create a specific supplier
+curl -X 'POST' \
+  'http://localhost:8080/supplier' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "supplierId": 0,
+  "companyName": "string",
+  "website": "string",
+  "location": "string",
+  "natureOfBusiness": "small_scale",
+  "manufacturingProcesses": "moulding"
+}'
